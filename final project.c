@@ -292,18 +292,65 @@ void remove_rent_house(char uname[]);
 void remove_rent_commercial(char uname[]);
 void remove_rent_land(char uname[]);
 void filter_sale_apartment();
+void filter_price_sale_apartment();
+void filter_municipal_sale_apartment();
+void filter_floor_sale_apartment();
+void filter_age_sale_apartment();
+void filter_bedroom_sale_apartment();
+void filter_substruction_sale_apartment();
 void filter_sale_house();
+void filter_price_sale_house();
+void filter_municipal_sale_house();
+void filter_floor_sale_house();
+void filter_age_sale_house();
+void filter_bedroom_sale_house();
+void filter_substruction_sale_house();
 void filter_sale_commercial();
+void filter_price_sale_commercial();
+void filter_municipal_sale_commercial();
+void filter_type_sale_commercial();
+void filter_floor_sale_commercial();
+void filter_age_sale_commercial();
+void filter_room_sale_commercial();
+void filter_substruction_sale_commercial();
 void filter_sale_land();
+void filter_price_sale_land();
+void filter_municipal_sale_land();
+void filter_type_sale_land();
+void filter_mesurement_sale_land();
 void filter_rent_apartment();
+void filter_price_rent_apartment();
+void filter_municipal_rent_apartment();
+void filter_floor_rent_apartment();
+void filter_age_rent_apartment();
+void filter_bedroom_rent_apartment();
+void filter_substruction_rent_apartment();
 void filter_rent_house();
+void filter_price_rent_house();
+void filter_municipal_rent_house();
+void filter_floor_rent_house();
+void filter_age_rent_house();
+void filter_bedroom_rent_house();
+void filter_substruction_rent_house();
 void filter_rent_commercial();
+void filter_price_rent_commercial();
+void filter_municipal_rent_commercial();
+void filter_type_rent_commercial();
+void filter_floor_rent_commercial();
+void filter_age_rent_commercial();
+void filter_room_rent_commercial();
+void filter_substruction_rent_commercial();
 void filter_rent_land();
+void filter_price_rent_land();
+void filter_municipal_rent_land();
+void filter_type_rent_land();
+void filter_mesurement_rent_land();
 /*functions*/
 
 void main()
 {
     int choice,choice2,choice3,choice4,choice5,choice6,choice7,choice8,choice9,choice10,choice11,choice12,choice13,choice14,choice15,choice16,choice17,choice18,choice19;
+    int choice20,choice21,choice22,choice23,choice24;
 
     char uname[50];
     char pass[50];
@@ -314,7 +361,7 @@ void main()
     do{
         system("cls");
         line();
-        printf("\n\t\tLOGIN MENU\n");
+        printf("\n\t\t  LOGIN MENU\n");
         line();
         printf("\n\n1. Login As An Admin ");
         printf("\n2. Login As An User");
@@ -523,6 +570,7 @@ void main()
                     }
                     else{
                         printf("\nInvalid Username or Password. Try Again\n");
+                        Beep(700,700);
                         system("pause");
                     }
                     break;
@@ -787,28 +835,340 @@ void main()
                                                         switch(choice16){
 
                                                             case 1:
-                                                                filter_sale_apartment();
+                                                                do{
+                                                                    system("cls");
+                                                                    line_usermenu();
+                                                                    printf("\n1.Filter By Price");
+                                                                    printf("\n2.Filter By Municipal Area");
+                                                                    printf("\n3.Filter By Floor");
+                                                                    printf("\n4.Filter By Age");
+                                                                    printf("\n5.Filter By Amount Of Bedrooms");
+                                                                    printf("\n6.Filter BY substruction");
+                                                                    printf("\n7.Filter By All Items");
+                                                                    printf("\n0.back");
+
+                                                                    printf("\n\n>>> Enter One Option : ");
+                                                                    scanf("%d",&choice17);
+
+                                                                    switch(choice17){
+
+                                                                        case 1:
+                                                                                filter_price_sale_apartment();
+                                                                                break;
+                                                                        case 2:
+                                                                                filter_municipal_sale_apartment();
+                                                                                break;
+                                                                        case 3:
+                                                                                filter_floor_sale_apartment();
+                                                                                break;
+                                                                        case 4:
+                                                                                filter_age_sale_apartment();
+                                                                                break;
+                                                                        case 5:
+                                                                                filter_bedroom_sale_apartment();
+                                                                                break;
+                                                                        case 6:
+                                                                                filter_substruction_sale_apartment();
+                                                                                break;
+                                                                        case 7:
+                                                                                filter_sale_apartment();
+                                                                                break;
+
+                                                                    }
+                                                                }while(choice17!=0);
                                                                 break;
                                                             case 2:
-                                                                filter_sale_house();
+                                                                do{
+                                                                    system("cls");
+                                                                    line_usermenu();
+                                                                    printf("\n1.Filter By Price");
+                                                                    printf("\n2.Filter By Municipal Area");
+                                                                    printf("\n3.Filter By Floor");
+                                                                    printf("\n4.Filter By Age");
+                                                                    printf("\n5.Filter By Amount Of Bedrooms");
+                                                                    printf("\n6.Filter BY substruction");
+                                                                    printf("\n7.Filter By All Items");
+                                                                    printf("\n0.back");
+
+                                                                    printf("\n\n>>> Enter One Option : ");
+                                                                    scanf("%d",&choice18);
+
+                                                                    switch(choice18){
+
+                                                                        case 1:
+                                                                                filter_price_sale_house();
+                                                                                break;
+                                                                        case 2:
+                                                                                filter_municipal_sale_house();
+                                                                                break;
+                                                                        case 3:
+                                                                                filter_floor_sale_house();
+                                                                                break;
+                                                                        case 4:
+                                                                                filter_age_sale_house();
+                                                                                break;
+                                                                        case 5:
+                                                                                filter_bedroom_sale_house();
+                                                                                break;
+                                                                        case 6:
+                                                                                filter_substruction_sale_house();
+                                                                                break;
+                                                                        case 7:
+                                                                                filter_sale_apartment();
+                                                                                break;
+
+                                                                    }
+                                                                }while(choice18!=0);
                                                                 break;
                                                             case 3:
-                                                                filter_sale_commercial();
+                                                                do{
+                                                                    system("cls");
+                                                                    line_usermenu();
+                                                                    printf("\n1.Filter By Price");
+                                                                    printf("\n2.Filter By Municipal Area");
+                                                                    printf("\n3.Filter By Type");
+                                                                    printf("\n4.Filter By Floor");
+                                                                    printf("\n5.Filter By Age");
+                                                                    printf("\n6.Filter By Amount Of Rooms");
+                                                                    printf("\n7.Filter BY substruction");
+                                                                    printf("\n8.Filter By All Items");
+                                                                    printf("\n0.back");
+
+                                                                    printf("\n\n>>> Enter One Option : ");
+                                                                    scanf("%d",&choice19);
+
+                                                                    switch(choice19){
+
+                                                                        case 1:
+                                                                                filter_price_sale_commercial();
+                                                                                break;
+                                                                        case 2:
+                                                                                filter_municipal_sale_commercial();
+                                                                                break;
+                                                                        case 3:
+                                                                                filter_type_sale_commercial();
+                                                                                break;
+                                                                        case 4:
+                                                                                filter_floor_sale_commercial();
+                                                                                break;
+                                                                        case 5:
+                                                                                filter_age_sale_commercial();
+                                                                                break;
+                                                                        case 6:
+                                                                                filter_room_sale_commercial();
+                                                                                break;
+                                                                        case 7:
+                                                                                filter_substruction_sale_commercial();
+                                                                                break;
+                                                                        case 8:
+                                                                                filter_sale_commercial();
+                                                                                break;
+
+                                                                    }
+                                                                }while(choice19!=0);
                                                                 break;
                                                             case 4:
-                                                                filter_sale_land();
+                                                                do{
+                                                                    system("cls");
+                                                                    line_usermenu();
+                                                                    printf("\n1.Filter By Price");
+                                                                    printf("\n2.Filter By Municipal Area");
+                                                                    printf("\n3.Filter By Type");
+                                                                    printf("\n4.Filter BY Mesurement");
+                                                                    printf("\n5.Filter By All Items");
+                                                                    printf("\n0.back");
+
+                                                                    printf("\n\n>>> Enter One Option : ");
+                                                                    scanf("%d",&choice20);
+
+                                                                    switch(choice20){
+
+                                                                        case 1:
+                                                                                filter_price_sale_land();
+                                                                                break;
+                                                                        case 2:
+                                                                                filter_municipal_sale_land();
+                                                                                break;
+                                                                        case 3:
+                                                                                filter_type_sale_land();
+                                                                                break;
+                                                                        case 4:
+                                                                                filter_mesurement_sale_land();
+                                                                                break;
+                                                                        case 5:
+                                                                                filter_sale_land();
+                                                                                break;
+
+                                                                    }
+                                                                }while(choice20!=0);
                                                                 break;
                                                             case 5:
-                                                                filter_rent_apartment();
+                                                                do{
+                                                                    system("cls");
+                                                                    line_usermenu();
+                                                                    printf("\n1.Filter By Price");
+                                                                    printf("\n2.Filter By Municipal Area");
+                                                                    printf("\n3.Filter By Floor");
+                                                                    printf("\n4.Filter By Age");
+                                                                    printf("\n5.Filter By Amount Of Bedrooms");
+                                                                    printf("\n6.Filter BY substruction");
+                                                                    printf("\n7.Filter By All Items");
+                                                                    printf("\n0.back");
+
+                                                                    printf("\n\n>>> Enter One Option : ");
+                                                                    scanf("%d",&choice21);
+
+                                                                    switch(choice21){
+
+                                                                        case 1:
+                                                                                filter_price_rent_apartment();
+                                                                                break;
+                                                                        case 2:
+                                                                                filter_municipal_rent_apartment();
+                                                                                break;
+                                                                        case 3:
+                                                                                filter_floor_rent_apartment();
+                                                                                break;
+                                                                        case 4:
+                                                                                filter_age_rent_apartment();
+                                                                                break;
+                                                                        case 5:
+                                                                                filter_bedroom_rent_apartment();
+                                                                                break;
+                                                                        case 6:
+                                                                                filter_substruction_rent_apartment();
+                                                                                break;
+                                                                        case 7:
+                                                                                filter_rent_apartment();
+                                                                                break;
+
+                                                                    }
+                                                                }while(choice21!=0);
                                                                 break;
                                                             case 6:
-                                                                filter_rent_house();
+                                                                do{
+                                                                    system("cls");
+                                                                    line_usermenu();
+                                                                    printf("\n1.Filter By Price");
+                                                                    printf("\n2.Filter By Municipal Area");
+                                                                    printf("\n3.Filter By Floor");
+                                                                    printf("\n4.Filter By Age");
+                                                                    printf("\n5.Filter By Amount Of Bedrooms");
+                                                                    printf("\n6.Filter BY substruction");
+                                                                    printf("\n7.Filter By All Items");
+                                                                    printf("\n0.back");
+
+                                                                    printf("\n\n>>> Enter One Option : ");
+                                                                    scanf("%d",&choice22);
+
+                                                                    switch(choice22){
+
+                                                                        case 1:
+                                                                                filter_price_rent_house();
+                                                                                break;
+                                                                        case 2:
+                                                                                filter_municipal_rent_house();
+                                                                                break;
+                                                                        case 3:
+                                                                                filter_floor_rent_house();
+                                                                                break;
+                                                                        case 4:
+                                                                                filter_age_rent_house();
+                                                                                break;
+                                                                        case 5:
+                                                                                filter_bedroom_rent_house();
+                                                                                break;
+                                                                        case 6:
+                                                                                filter_substruction_rent_house();
+                                                                                break;
+                                                                        case 7:
+                                                                                filter_rent_house();
+                                                                                break;
+
+                                                                    }
+                                                                }while(choice22!=0);
                                                                 break;
                                                             case 7:
-                                                                filter_rent_commercial();
+                                                                do{
+                                                                    system("cls");
+                                                                    line_usermenu();
+                                                                    printf("\n1.Filter By Price");
+                                                                    printf("\n2.Filter By Municipal Area");
+                                                                    printf("\n3.Filter By Type");
+                                                                    printf("\n4.Filter By Floor");
+                                                                    printf("\n5.Filter By Age");
+                                                                    printf("\n6.Filter By Amount Of Rooms");
+                                                                    printf("\n7.Filter BY substruction");
+                                                                    printf("\n8.Filter By All Items");
+                                                                    printf("\n0.back");
+
+                                                                    printf("\n\n>>> Enter One Option : ");
+                                                                    scanf("%d",&choice23);
+
+                                                                    switch(choice23){
+
+                                                                        case 1:
+                                                                                filter_price_rent_commercial();
+                                                                                break;
+                                                                        case 2:
+                                                                                filter_municipal_rent_commercial();
+                                                                                break;
+                                                                        case 3:
+                                                                                filter_type_rent_commercial();
+                                                                                break;
+                                                                        case 4:
+                                                                                filter_floor_rent_commercial();
+                                                                                break;
+                                                                        case 5:
+                                                                                filter_age_rent_commercial();
+                                                                                break;
+                                                                        case 6:
+                                                                                filter_room_rent_commercial();
+                                                                                break;
+                                                                        case 7:
+                                                                                filter_substruction_rent_commercial();
+                                                                                break;
+                                                                        case 8:
+                                                                                filter_rent_commercial();
+                                                                                break;
+
+                                                                    }
+                                                                }while(choice23!=0);
                                                                 break;
                                                             case 8:
-                                                                filter_rent_land();
+                                                                do{
+                                                                    system("cls");
+                                                                    line_usermenu();
+                                                                    printf("\n1.Filter By Price");
+                                                                    printf("\n2.Filter By Municipal Area");
+                                                                    printf("\n3.Filter By Type");
+                                                                    printf("\n4.Filter BY Measurement");
+                                                                    printf("\n5.Filter By All Items");
+                                                                    printf("\n0.back");
+
+                                                                    printf("\n\n>>> Enter One Option : ");
+                                                                    scanf("%d",&choice24);
+
+                                                                    switch(choice24){
+
+                                                                        case 1:
+                                                                                filter_price_rent_land();
+                                                                                break;
+                                                                        case 2:
+                                                                                filter_municipal_rent_land();
+                                                                                break;
+                                                                        case 3:
+                                                                                filter_type_rent_land();
+                                                                                break;
+                                                                        case 4:
+                                                                                filter_mesurement_rent_land();
+                                                                                break;
+                                                                        case 5:
+                                                                                filter_rent_land();
+                                                                                break;
+
+                                                                    }
+                                                                }while(choice24!=0);
                                                                 break;
 
                                                         }
@@ -830,6 +1190,7 @@ void main()
                     }
                     else{
                         printf("\nInvalid Username or Password. Try Again\n");
+                        Beep(700,700);
                         system("pause");
                     }
 
@@ -1045,6 +1406,7 @@ void register_user()
     fclose(fp);
 
     printf("\nAccount Created Successfuly . Don't share your username and password with anyone!\n");
+    Beep(700,700);
 
 
 }
@@ -1104,6 +1466,7 @@ void add_admin()
     fclose(fp);
 
     printf("\nAccount Created Successfuly . Don't share your username and password with anyone!\n");
+    Beep(700,700);
     system("pause");
 }
 
@@ -1352,8 +1715,8 @@ void add_sale_apartment(char uname[])
     t = time(NULL);
     ptr = localtime(&t);
 
-    strftime(ap.registration_date,100,"%x",ptr);
-    strftime(ap.sale_date,100,"%x",ptr);
+    strftime(ap.registration_date,100,"%y/%m/%d",ptr);
+    strftime(ap.sale_date,100,"%y/%m/%d",ptr);
 
     strcpy(ap.registerar_uname,uname);
     strcpy(ap.seller_uname,uname);
@@ -1366,6 +1729,7 @@ void add_sale_apartment(char uname[])
     fclose(fp);
 
     printf("\nNew Case Has Been Added To The System Successfully.\n");
+    Beep(700,700);
     system("pause");
 
 }
@@ -1430,8 +1794,8 @@ void add_sale_house(char uname[])
     t = time(NULL);
     ptr = localtime(&t);
 
-    strftime(h.registration_date,100,"%x",ptr);
-    strftime(h.sale_date,100,"%x",ptr);
+    strftime(h.registration_date,100,"%y/%m/%d",ptr);
+    strftime(h.sale_date,100,"%y/%m/%d",ptr);
 
     strcpy(h.registerar_uname,uname);
     strcpy(h.seller_uname,uname);
@@ -1444,6 +1808,7 @@ void add_sale_house(char uname[])
     fclose(fp);
 
     printf("\nNew Case Has Been Added To The System Successfully.\n");
+    Beep(700,700);
     system("pause");
 
 
@@ -1519,8 +1884,8 @@ void add_sale_commercial(char uname[])
     t = time(NULL);
     ptr = localtime(&t);
 
-    strftime(co.registration_date,100,"%x",ptr);
-    strftime(co.sale_date,100,"%x",ptr);
+    strftime(co.registration_date,100,"%y/%m/%d",ptr);
+    strftime(co.sale_date,100,"%y/%m/%d",ptr);
 
     strcpy(co.registerar_uname,uname);
     strcpy(co.seller_uname,uname);
@@ -1533,6 +1898,7 @@ void add_sale_commercial(char uname[])
     fclose(fp);
 
     printf("\nNew Case Has Been Added To The System Successfully.\n");
+    Beep(700,700);
     system("pause");
 
 }
@@ -1586,8 +1952,8 @@ void add_sale_land(char uname[])
     t = time(NULL);
     ptr = localtime(&t);
 
-    strftime(ld.registration_date,100,"%x",ptr);
-    strftime(ld.sale_date,100,"%x",ptr);
+    strftime(ld.registration_date,100,"%y/%m/%d",ptr);
+    strftime(ld.sale_date,100,"%y/%m/%d",ptr);
 
     strcpy(ld.registerar_uname,uname);
     strcpy(ld.seller_uname,uname);
@@ -1600,6 +1966,7 @@ void add_sale_land(char uname[])
     fclose(fp);
 
     printf("\nNew Case Has Been Added To The System Successfully.\n");
+    Beep(700,700);
     system("pause");
 }
 
@@ -1666,8 +2033,8 @@ void add_rent_apartment(char uname[])
     t = time(NULL);
     ptr = localtime(&t);
 
-    strftime(ap.registration_date,100,"%x",ptr);
-    strftime(ap.sale_date,100,"%x",ptr);
+    strftime(ap.registration_date,100,"%y/%m/%d",ptr);
+    strftime(ap.sale_date,100,"%y/%m/%d",ptr);
 
     strcpy(ap.registerar_uname,uname);
     strcpy(ap.seller_uname,uname);
@@ -1680,6 +2047,7 @@ void add_rent_apartment(char uname[])
     fclose(fp);
 
     printf("\nNew Case Has Been Added To The System Successfully.\n");
+    Beep(700,700);
     system("pause");
 
 }
@@ -1747,8 +2115,8 @@ void add_rent_house(char uname[])
     t = time(NULL);
     ptr = localtime(&t);
 
-    strftime(h.registration_date,100,"%x",ptr);
-    strftime(h.sale_date,100,"%x",ptr);
+    strftime(h.registration_date,100,"%y/%m/%d",ptr);
+    strftime(h.sale_date,100,"%y/%m/%d",ptr);
 
     strcpy(h.registerar_uname,uname);
     strcpy(h.seller_uname,uname);
@@ -1761,6 +2129,7 @@ void add_rent_house(char uname[])
     fclose(fp);
 
     printf("\nNew Case Has Been Added To The System Successfully.\n");
+    Beep(700,700);
     system("pause");
 }
 
@@ -1838,8 +2207,8 @@ void add_rent_commercial(char uname[])
     t = time(NULL);
     ptr = localtime(&t);
 
-    strftime(co.registration_date,100,"%x",ptr);
-    strftime(co.sale_date,100,"%x",ptr);
+    strftime(co.registration_date,100,"%y/%m/%d",ptr);
+    strftime(co.sale_date,100,"%y/%m/%d",ptr);
 
     strcpy(co.registerar_uname,uname);
     strcpy(co.seller_uname,uname);
@@ -1852,6 +2221,7 @@ void add_rent_commercial(char uname[])
     fclose(fp);
 
     printf("\nNew Case Has Been Added To The System Successfully.\n");
+    Beep(700,700);
     system("pause");
 }
 
@@ -1908,8 +2278,8 @@ void add_rent_land(char uname[])
     t = time(NULL);
     ptr = localtime(&t);
 
-    strftime(ld.registration_date,100,"%x",ptr);
-    strftime(ld.sale_date,100,"%x",ptr);
+    strftime(ld.registration_date,100,"%y/%m/%d",ptr);
+    strftime(ld.sale_date,100,"%y/%m/%d",ptr);
 
     strcpy(ld.registerar_uname,uname);
     strcpy(ld.seller_uname,uname);
@@ -1922,6 +2292,7 @@ void add_rent_land(char uname[])
     fclose(fp);
 
     printf("\nNew Case Has Been Added To The System Successfully.\n");
+    Beep(700,700);
     system("pause");
 }
 
@@ -1989,15 +2360,19 @@ void show_sale_apartment()
             printf("amount of bedrooms : %d\n",temp->bedroom);
             printf("price($) : %d\n",temp->price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
 
-    if(count_apartemnt == 0 || count_apartemnt == 1)
+    if(count_apartemnt == 0 || count_apartemnt == 1){
         printf("\n%d Apartment Is Available For Sale.\n\n",count_apartemnt);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Apartments Are Available For Sale.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
     system("pause");
 
 }
@@ -2066,16 +2441,19 @@ void show_sale_house()
             printf("amount of bedrooms : %d\n",temp->bedroom);
             printf("price($) : %d\n",temp->price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
 
-    if(count_house == 0 || count_house == 1)
+    if(count_house == 0 || count_house == 1){
         printf("\n%d House Is Available For Sale.\n\n",count_house);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Houses Are Available For Sale.\n\n",count_house);
-
+        Beep(700,700);
+    }
     system("pause");
 }
 
@@ -2145,15 +2523,19 @@ void show_sale_commercial()
             printf("amount of rooms : %d\n",temp->room);
             printf("price($) : %d\n",temp->price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
 
-    if(count_commercial == 0 || count_commercial == 1)
+    if(count_commercial == 0 || count_commercial == 1){
         printf("\n%d Commercial Property Is Available For Sale.\n\n",count_commercial);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Commercial Properties Are Available For Sale.\n\n",count_commercial);
+        Beep(700,700);
+    }
     system("pause");
 
 }
@@ -2216,14 +2598,18 @@ void show_sale_land()
             printf("owner phone-number : %s\n",temp->phone);
             printf("price($) : %d\n",temp->price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
-    if(count_land == 0 || count_land == 1)
+    if(count_land == 0 || count_land == 1){
         printf("\n%d Land Is Available For Sale.\n\n",count_land);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Lands Are Available For Sale.\n\n",count_land);
+        Beep(700,700);
+    }
     system("pause");
 }
 
@@ -2293,15 +2679,18 @@ void show_rent_apartment()
             printf("Mortgage price($) : %d\n",temp->mortgage_price);
             printf("Rent price($) : %d\n",temp->rent_price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
-    if(count_apartemnt == 0 || count_apartemnt == 1)
+    if(count_apartemnt == 0 || count_apartemnt == 1){
         printf("\n%d Apartment Is Available For Rent.\n\n",count_apartemnt);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Apartments Are Available For Rent.\n\n",count_apartemnt);
-
+        Beep(700,700);
+    }
     system("pause");
 }
 
@@ -2371,16 +2760,19 @@ void show_rent_house()
             printf("Mortgage price($) : %d\n",temp->mortgage_price);
             printf("Rent price($) : %d\n",temp->rent_price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
 
-    if(count_house == 0 || count_house == 1)
+    if(count_house == 0 || count_house == 1){
         printf("\n%d House Is Available For Rent.\n\n",count_house);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Houses Are Available For Rent.\n\n",count_house);
-
+        Beep(700,700);
+    }
     system("pause");
 }
 
@@ -2452,14 +2844,18 @@ void show_rent_commercial()
             printf("Mortgage price($) : %d\n",temp->mortgage_price);
             printf("Rent price($) : %d\n",temp->rent_price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
-    if(count_commercial == 0 || count_commercial == 1)
+    if(count_commercial == 0 || count_commercial == 1){
         printf("\n%d Commercial Property Is Available For Rent.\n\n",count_commercial);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Commercial Properties Are Available For Rent.\n\n",count_commercial);
+        Beep(700,700);
+    }
     system("pause");
 }
 
@@ -2523,14 +2919,18 @@ void show_rent_land()
             printf("Mortgage price($) : %d\n",temp->mortgage_price);
             printf("Rent price($) : %d\n",temp->rent_price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
-    if(count_land == 0 || count_land == 1)
+    if(count_land == 0 || count_land == 1){
         printf("\n%d Land Is Available For Rent.\n\n",count_land);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Lands Are Available For Rent.\n\n",count_land);
+        Beep(700,700);
+    }
     system("pause");
 }
 
@@ -2686,7 +3086,7 @@ void remove_sale_apartment(char uname[])
             t = time(NULL);
             ptr = localtime(&t);
 
-            strftime(ap.sale_date,100,"%x",ptr);
+            strftime(ap.sale_date,100,"%y/%m/%d",ptr);
 
 
         }
@@ -2710,8 +3110,10 @@ void remove_sale_apartment(char uname[])
     fclose(fp);
     if(found == 1){
         printf("\nCase Has Been Removed Successfully.\n");
+        Beep(700,700);
     }else{
         printf("\nThere Is No Case With This Number.\n\n");
+        Beep(700,700);
     }
     system("pause");
 
@@ -2749,7 +3151,7 @@ void remove_sale_house(char uname[])
             t = time(NULL);
             ptr = localtime(&t);
 
-            strftime(h.sale_date,100,"%x",ptr);
+            strftime(h.sale_date,100,"%y/%m/%d",ptr);
 
 
         }
@@ -2773,8 +3175,10 @@ void remove_sale_house(char uname[])
     fclose(fp);
     if(found == 1){
         printf("\nCase Has Been Removed Successfully.\n");
+        Beep(700,700);
     }else{
         printf("\nThere Is No Case With This Number.\n\n");
+        Beep(700,700);
     }
     system("pause");
 }
@@ -2811,7 +3215,7 @@ void remove_sale_commercial(char uname[])
             t = time(NULL);
             ptr = localtime(&t);
 
-            strftime(co.sale_date,100,"%x",ptr);
+            strftime(co.sale_date,100,"%y/%m/%d",ptr);
 
 
         }
@@ -2835,8 +3239,10 @@ void remove_sale_commercial(char uname[])
     fclose(fp);
     if(found == 1){
         printf("\nCase Has Been Removed Successfully.\n");
+        Beep(700,700);
     }else{
         printf("\nThere Is No Case With This Number.\n\n");
+        Beep(700,700);
     }
     system("pause");
 }
@@ -2873,7 +3279,7 @@ void remove_sale_land(char uname[])
             t = time(NULL);
             ptr = localtime(&t);
 
-            strftime(ld.sale_date,100,"%x",ptr);
+            strftime(ld.sale_date,100,"%y/%m/%d",ptr);
 
 
         }
@@ -2897,8 +3303,10 @@ void remove_sale_land(char uname[])
     fclose(fp);
     if(found == 1){
         printf("\nCase Has Been Removed Successfully.\n");
+        Beep(700,700);
     }else{
         printf("\nThere Is No Case With This Number.\n\n");
+        Beep(700,700);
     }
     system("pause");
 }
@@ -2935,7 +3343,7 @@ void remove_rent_apartment(char uname[])
             t = time(NULL);
             ptr = localtime(&t);
 
-            strftime(ap.sale_date,100,"%x",ptr);
+            strftime(ap.sale_date,100,"%y/%m/%d",ptr);
 
 
         }
@@ -2959,8 +3367,10 @@ void remove_rent_apartment(char uname[])
     fclose(fp);
     if(found == 1){
         printf("\nCase Has Been Removed Successfully.\n");
+        Beep(700,700);
     }else{
         printf("\nThere Is No Case With This Number.\n\n");
+        Beep(700,700);
     }
     system("pause");
 }
@@ -2997,7 +3407,7 @@ void remove_rent_house(char uname[])
             t = time(NULL);
             ptr = localtime(&t);
 
-            strftime(h.sale_date,100,"%x",ptr);
+            strftime(h.sale_date,100,"%y/%m/%d",ptr);
 
 
         }
@@ -3021,8 +3431,10 @@ void remove_rent_house(char uname[])
     fclose(fp);
     if(found == 1){
         printf("\nCase Has Been Removed Successfully.\n");
+        Beep(700,700);
     }else{
         printf("\nThere Is No Case With This Number.\n\n");
+        Beep(700,700);
     }
     system("pause");
 }
@@ -3059,7 +3471,7 @@ void remove_rent_commercial(char uname[])
             t = time(NULL);
             ptr = localtime(&t);
 
-            strftime(co.sale_date,100,"%x",ptr);
+            strftime(co.sale_date,100,"%y/%m/%d",ptr);
 
 
         }
@@ -3083,8 +3495,10 @@ void remove_rent_commercial(char uname[])
     fclose(fp);
     if(found == 1){
         printf("\nCase Has Been Removed Successfully.\n");
+        Beep(700,700);
     }else{
         printf("\nThere Is No Case With This Number.\n\n");
+        Beep(700,700);
     }
     system("pause");
 }
@@ -3121,7 +3535,7 @@ void remove_rent_land(char uname[])
             t = time(NULL);
             ptr = localtime(&t);
 
-            strftime(ld.sale_date,100,"%x",ptr);
+            strftime(ld.sale_date,100,"%y/%m/%d",ptr);
 
 
         }
@@ -3145,8 +3559,10 @@ void remove_rent_land(char uname[])
     fclose(fp);
     if(found == 1){
         printf("\nCase Has Been Removed Successfully.\n");
+        Beep(700,700);
     }else{
         printf("\nThere Is No Case With This Number.\n\n");
+        Beep(700,700);
     }
     system("pause");
 }
@@ -4477,7 +4893,7 @@ void sold_filter_date_sale_apartment()
 
     line_2();
 
-    printf("Please Enter The Dates In This Format (mm/dd/yy)\n\n");
+    printf("Please Enter The Dates In This Format (yy/mm/dd)\n\n");
     printf("Beggining Date : ");
     fflush(stdin);
     gets(date_1);
@@ -4555,6 +4971,7 @@ void sold_filter_date_sale_apartment()
     }
 
     printf("\n%d Apartment(s) Has Been Sold In This Period.\n\n",count_apartment);
+    Beep(700,700);
     system("pause");
 }
 
@@ -4570,7 +4987,7 @@ void sold_filter_date_sale_house()
 
     line_2();
 
-    printf("Please Enter The Dates In This Format (mm/dd/yy)\n\n");
+    printf("Please Enter The Dates In This Format (yy/mm/dd)\n\n");
     printf("Beggining date : ");
     fflush(stdin);
     gets(date_1);
@@ -4648,6 +5065,7 @@ void sold_filter_date_sale_house()
     }
 
     printf("\n%d House(s) Has Been Sold In This Period.\n\n",count_house);
+    Beep(700,700);
     system("pause");
 }
 
@@ -4663,7 +5081,7 @@ void sold_filter_date_sale_commercial()
 
     line_2();
 
-    printf("Please Enter The Dates In This Format (mm/dd/yy)\n\n");
+    printf("Please Enter The Dates In This Format (yy/mm/dd)\n\n");
     printf("Beggining date : ");
     fflush(stdin);
     gets(date_1);
@@ -4742,6 +5160,7 @@ void sold_filter_date_sale_commercial()
     }
 
     printf("\n%d Commercial Properties Has Been Sold In This Period.\n\n",count_commercial);
+    Beep(700,700);
     system("pause");
 
 }
@@ -4758,7 +5177,7 @@ void sold_filter_date_sale_land()
 
     line_2();
 
-    printf("Please Enter The Dates In This Format (mm/dd/yy)\n\n");
+    printf("Please Enter The Dates In This Format (yy/mm/dd)\n\n");
     printf("Beggining date : ");
     fflush(stdin);
     gets(date_1);
@@ -4829,6 +5248,7 @@ void sold_filter_date_sale_land()
     }
 
     printf("\n%d Land(s) Has Been Sold In This Period.\n\n",count_land);
+    Beep(700,700);
     system("pause");
 }
 
@@ -4844,7 +5264,7 @@ void sold_filter_date_rent_apartment()
 
     line_2();
 
-    printf("Please Enter The Dates In This Format (mm/dd/yy)\n\n");
+    printf("Please Enter The Dates In This Format (yy/mm/dd)\n\n");
     printf("Beggining date : ");
     fflush(stdin);
     gets(date_1);
@@ -4923,6 +5343,7 @@ void sold_filter_date_rent_apartment()
     }
 
     printf("\n%d Apartment(s) Has Been Rented In This Period.\n\n",count_apartment);
+    Beep(700,700);
     system("pause");
 
 }
@@ -4939,7 +5360,7 @@ void sold_filter_date_rent_house()
 
     line_2();
 
-    printf("Please Enter The Dates In This Format (mm/dd/yy)\n\n");
+    printf("Please Enter The Dates In This Format (yy/mm/dd)\n\n");
     printf("Beggining date : ");
     fflush(stdin);
     gets(date_1);
@@ -5018,6 +5439,7 @@ void sold_filter_date_rent_house()
     }
 
     printf("\n%d House(s) Has Been Rented In This Period.\n\n",count_house);
+    Beep(700,700);
     system("pause");
 }
 
@@ -5033,7 +5455,7 @@ void sold_filter_date_rent_commercial()
 
     line_2();
 
-    printf("Please Enter The Dates In This Format (mm/dd/yy)\n\n");
+    printf("Please Enter The Dates In This Format (yy/mm/dd)\n\n");
     printf("Beggining date : ");
     fflush(stdin);
     gets(date_1);
@@ -5114,6 +5536,7 @@ void sold_filter_date_rent_commercial()
     }
 
     printf("\n%d Commercial Properties Has Been Rented In This Period.\n\n",count_commercial);
+    Beep(700,700);
     system("pause");
 }
 
@@ -5129,7 +5552,7 @@ void sold_filter_date_rent_land()
 
     line_2();
 
-    printf("Please Enter The Dates In This Format (mm/dd/yy)\n\n");
+    printf("Please Enter The Dates In This Format (yy/mm/dd)\n\n");
     printf("Beggining date : ");
     fflush(stdin);
     gets(date_1);
@@ -5202,6 +5625,7 @@ void sold_filter_date_rent_land()
     }
 
     printf("\n%d Land(s) Has Been Rented In This Period.\n\n",count_land);
+    Beep(700,700);
     system("pause");
 }
 
@@ -5330,12 +5754,561 @@ void filter_sale_apartment()
             printf("amount of bedrooms : %d\n",temp->bedroom);
             printf("price($) : %d\n",temp->price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
 
-    printf("\n%d Apartment(s) Is Available For Sale With This Conditions.\n\n",count_apartemnt);
+    if(count_apartemnt == 0 || count_apartemnt == 1){
+        printf("\n%d Apartment Is Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Apartments Are Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_price_sale_apartment()
+{
+    int min_price, max_price;
+    int count_apartemnt = 0;
+    struct apartment *head = NULL , *temp = NULL , *last = NULL;
+    struct apartment ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Price : ");
+    scanf("%d",&min_price);
+    printf("Please Enter Max Price : ");
+    scanf("%d",&max_price);
+
+
+    system("cls");
+
+    FILE *fp = fopen("sale_apartment.txt","r");
+
+    while(fread(&ap,sizeof(struct apartment),1, fp)){
+
+
+        temp = malloc(sizeof(struct apartment));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->price = ap.price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->price >= min_price && temp->price <= max_price){
+            count_apartemnt++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_apartemnt == 0 || count_apartemnt == 1){
+        printf("\n%d Apartment Is Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Apartments Are Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_municipal_sale_apartment()
+{
+    int min_municipal, max_municipal;
+    int count_apartemnt = 0;
+    struct apartment *head = NULL , *temp = NULL , *last = NULL;
+    struct apartment ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Municipal Area : ");
+    scanf("%d",&min_municipal);
+    printf("Please Enter Max Municipal Area : ");
+    scanf("%d",&max_municipal);
+
+    system("cls");
+
+    FILE *fp = fopen("sale_apartment.txt","r");
+
+    while(fread(&ap,sizeof(struct apartment),1, fp)){
+
+
+        temp = malloc(sizeof(struct apartment));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->price = ap.price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->municipal_area >= min_municipal && temp->municipal_area <= max_municipal ){
+            count_apartemnt++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_apartemnt == 0 || count_apartemnt == 1){
+        printf("\n%d Apartment Is Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Apartments Are Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_floor_sale_apartment()
+{
+    int min_floor, max_floor;
+    int count_apartemnt = 0;
+    struct apartment *head = NULL , *temp = NULL , *last = NULL;
+    struct apartment ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Floor : ");
+    scanf("%d",&min_floor);
+    printf("Please Enter Max Floor : ");
+    scanf("%d",&max_floor);
+
+
+    system("cls");
+
+    FILE *fp = fopen("sale_apartment.txt","r");
+
+    while(fread(&ap,sizeof(struct apartment),1, fp)){
+
+
+        temp = malloc(sizeof(struct apartment));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->price = ap.price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->floor >= min_floor && temp->floor <= max_floor ){
+            count_apartemnt++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_apartemnt == 0 || count_apartemnt == 1){
+        printf("\n%d Apartment Is Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Apartments Are Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_age_sale_apartment()
+{
+    int min_age, max_age;
+    int count_apartemnt = 0;
+    struct apartment *head = NULL , *temp = NULL , *last = NULL;
+    struct apartment ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Age Of Apartment : ");
+    scanf("%d",&min_age);
+    printf("Please Enter Max Age Of Apartment : ");
+    scanf("%d",&max_age);
+
+    system("cls");
+
+    FILE *fp = fopen("sale_apartment.txt","r");
+
+    while(fread(&ap,sizeof(struct apartment),1, fp)){
+
+
+        temp = malloc(sizeof(struct apartment));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->price = ap.price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->age >= min_age && temp->age <= max_age ){
+            count_apartemnt++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_apartemnt == 0 || count_apartemnt == 1){
+        printf("\n%d Apartment Is Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Apartments Are Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_bedroom_sale_apartment()
+{
+    int min_bedroom, max_bedroom;
+    int count_apartemnt = 0;
+    struct apartment *head = NULL , *temp = NULL , *last = NULL;
+    struct apartment ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter The Min Number Of Bedrooms : ");
+    scanf("%d",&min_bedroom);
+    printf("Please Enter The Max Number Of Bedrooms : ");
+    scanf("%d",&max_bedroom);
+
+    system("cls");
+
+    FILE *fp = fopen("sale_apartment.txt","r");
+
+    while(fread(&ap,sizeof(struct apartment),1, fp)){
+
+
+        temp = malloc(sizeof(struct apartment));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->price = ap.price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->bedroom >= min_bedroom && temp->bedroom <= max_bedroom){
+            count_apartemnt++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_apartemnt == 0 || count_apartemnt == 1){
+        printf("\n%d Apartment Is Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Apartments Are Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_substruction_sale_apartment()
+{
+    int min_substruction , max_substruction;
+    int count_apartemnt = 0;
+    struct apartment *head = NULL , *temp = NULL , *last = NULL;
+    struct apartment ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min substruction Area : ");
+    scanf("%d",&min_substruction);
+    printf("Please Enter Max substruction Area  : ");
+    scanf("%d",&max_substruction);
+
+    system("cls");
+
+    FILE *fp = fopen("sale_apartment.txt","r");
+
+    while(fread(&ap,sizeof(struct apartment),1, fp)){
+
+
+        temp = malloc(sizeof(struct apartment));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->price = ap.price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->substruction >= min_substruction && temp->substruction <= max_substruction  ){
+            count_apartemnt++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_apartemnt == 0 || count_apartemnt == 1){
+        printf("\n%d Apartment Is Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Apartments Are Available For Sale With This Conditions.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
     system("pause");
 }
 
@@ -5469,11 +6442,556 @@ void filter_sale_house()
         temp = temp->next;
     }
 
-    if(count_house == 0 || count_house == 1)
+    if(count_house == 0 || count_house == 1){
         printf("\n%d House Is Available For Sale With This Conditions.\n\n",count_house);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Houses Are Available For Sale With This Conditions.\n\n",count_house);
+        Beep(700,700);
+    }
+    system("pause");
+}
 
+void filter_price_sale_house()
+{
+    int min_price, max_price;
+    int count_house = 0;
+    struct house *head = NULL , *temp = NULL , *last = NULL;
+    struct house ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Price : ");
+    scanf("%d",&min_price);
+    printf("Please Enter Max Price : ");
+    scanf("%d",&max_price);
+
+
+    system("cls");
+
+    FILE *fp = fopen("sale_house.txt","r");
+
+    while(fread(&ap,sizeof(struct house),1, fp)){
+
+
+        temp = malloc(sizeof(struct house));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->price = ap.price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->price >= min_price && temp->price <= max_price){
+            count_house++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_house == 0 || count_house == 1){
+        printf("\n%d House Is Available For Sale With This Conditions.\n\n",count_house);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Houses Are Available For Sale With This Conditions.\n\n",count_house);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_municipal_sale_house()
+{
+    int min_municipal, max_municipal;
+    int count_house = 0;
+    struct house *head = NULL , *temp = NULL , *last = NULL;
+    struct house ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Municipal Area : ");
+    scanf("%d",&min_municipal);
+    printf("Please Enter Max Municipal Area : ");
+    scanf("%d",&max_municipal);
+
+    system("cls");
+
+    FILE *fp = fopen("sale_house.txt","r");
+
+    while(fread(&ap,sizeof(struct house),1, fp)){
+
+
+        temp = malloc(sizeof(struct house));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->price = ap.price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->municipal_area >= min_municipal && temp->municipal_area <= max_municipal ){
+            count_house++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_house == 0 || count_house == 1){
+        printf("\n%d House Is Available For Sale With This Conditions.\n\n",count_house);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Houses Are Available For Sale With This Conditions.\n\n",count_house);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_floor_sale_house()
+{
+    int min_floor, max_floor;
+    int count_house = 0;
+    struct house *head = NULL , *temp = NULL , *last = NULL;
+    struct house ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Floor : ");
+    scanf("%d",&min_floor);
+    printf("Please Enter Max Floor : ");
+    scanf("%d",&max_floor);
+
+
+    system("cls");
+
+    FILE *fp = fopen("sale_house.txt","r");
+
+    while(fread(&ap,sizeof(struct house),1, fp)){
+
+
+        temp = malloc(sizeof(struct house));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->price = ap.price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->floor >= min_floor && temp->floor <= max_floor ){
+            count_house++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_house == 0 || count_house == 1){
+        printf("\n%d House Is Available For Sale With This Conditions.\n\n",count_house);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Houses Are Available For Sale With This Conditions.\n\n",count_house);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_age_sale_house()
+{
+    int min_age, max_age;
+    int count_house = 0;
+    struct house *head = NULL , *temp = NULL , *last = NULL;
+    struct house ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Age Of house : ");
+    scanf("%d",&min_age);
+    printf("Please Enter Max Age Of house : ");
+    scanf("%d",&max_age);
+
+    system("cls");
+
+    FILE *fp = fopen("sale_house.txt","r");
+
+    while(fread(&ap,sizeof(struct house),1, fp)){
+
+
+        temp = malloc(sizeof(struct house));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->price = ap.price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->age >= min_age && temp->age <= max_age ){
+            count_house++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_house == 0 || count_house == 1){
+        printf("\n%d House Is Available For Sale With This Conditions.\n\n",count_house);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Houses Are Available For Sale With This Conditions.\n\n",count_house);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_bedroom_sale_house()
+{
+    int min_bedroom, max_bedroom;
+    int count_house = 0;
+    struct house *head = NULL , *temp = NULL , *last = NULL;
+    struct house ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter The Min Number Of Bedrooms : ");
+    scanf("%d",&min_bedroom);
+    printf("Please Enter The Max Number Of Bedrooms : ");
+    scanf("%d",&max_bedroom);
+
+    system("cls");
+
+    FILE *fp = fopen("sale_house.txt","r");
+
+    while(fread(&ap,sizeof(struct house),1, fp)){
+
+
+        temp = malloc(sizeof(struct house));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->price = ap.price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->bedroom >= min_bedroom && temp->bedroom <= max_bedroom){
+            count_house++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_house == 0 || count_house == 1){
+        printf("\n%d House Is Available For Sale With This Conditions.\n\n",count_house);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Houses Are Available For Sale With This Conditions.\n\n",count_house);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_substruction_sale_house()
+{
+    int min_substruction , max_substruction;
+    int count_house = 0;
+    struct house *head = NULL , *temp = NULL , *last = NULL;
+    struct house ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min substruction Area : ");
+    scanf("%d",&min_substruction);
+    printf("Please Enter Max substruction Area  : ");
+    scanf("%d",&max_substruction);
+
+    system("cls");
+
+    FILE *fp = fopen("sale_house.txt","r");
+
+    while(fread(&ap,sizeof(struct house),1, fp)){
+
+
+        temp = malloc(sizeof(struct house));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->price = ap.price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->substruction >= min_substruction && temp->substruction <= max_substruction  ){
+            count_house++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_house == 0 || count_house == 1){
+        printf("\n%d House Is Available For Sale With This Conditions.\n\n",count_house);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Houses Are Available For Sale With This Conditions.\n\n",count_house);
+        Beep(700,700);
+    }
     system("pause");
 }
 
@@ -5618,16 +7136,676 @@ void filter_sale_commercial()
             printf("amount of rooms : %d\n",temp->room);
             printf("price($) : %d\n",temp->price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
 
-    if(count_commercial == 0 || count_commercial == 1)
+    if(count_commercial == 0 || count_commercial == 1){
         printf("\n%d Commercial Property Is Available For Sale With This Condition.\n\n",count_commercial);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Commercial Properties Are Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
+}
 
+void filter_price_sale_commercial()
+{
+    int min_price, max_price;
+    int count_commercial = 0;
+    struct commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct commercial co;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Price : ");
+    scanf("%d",&min_price);
+    printf("Please Enter Max Price : ");
+    scanf("%d",&max_price);
+
+
+
+    FILE *fp = fopen("sale_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->price = co.price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->price >= min_price && temp->price <= max_price){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_municipal_sale_commercial()
+{
+    int min_municipal, max_municipal;
+    int count_commercial = 0;
+    struct commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct commercial co;
+
+    system("cls");
+
+
+    line_2();
+
+    printf("Please Enter Min Municipal Area : ");
+    scanf("%d",&min_municipal);
+    printf("Please Enter Max Municipal Area : ");
+    scanf("%d",&max_municipal);
+
+
+    FILE *fp = fopen("sale_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->price = co.price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->municipal_area >= min_municipal && temp->municipal_area <= max_municipal){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_type_sale_commercial()
+{
+    char type_of_document[50];
+    int opt;
+    int count_commercial = 0;
+    struct commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct commercial co;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Specify The Document Type(1-Official administrative document OR 2-Administrative position)\nPlease Enter number 1 or 2 : ");
+    fflush(stdin);
+    scanf("%d",&opt);
+    if(opt == 1){
+        strcpy(type_of_document,"Official administrative document");
+    }
+    if(opt == 2){
+        strcpy(type_of_document,"Administrative position");
+    }
+
+    FILE *fp = fopen("sale_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->price = co.price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && strcmp(type_of_document,temp->document)==0){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_floor_sale_commercial()
+{
+    int min_floor, max_floor;
+    int count_commercial = 0;
+    struct commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct commercial co;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Floor : ");
+    scanf("%d",&min_floor);
+    printf("Please Enter Max Floor : ");
+    scanf("%d",&max_floor);
+
+
+    FILE *fp = fopen("sale_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->price = co.price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->floor >= min_floor && temp->floor <= max_floor){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_age_sale_commercial()
+{
+    int min_age, max_age;
+    int count_commercial = 0;
+    struct commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct commercial co;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Age Of Commercial property : ");
+    scanf("%d",&min_age);
+    printf("Please Enter Max Age Of Commercial property : ");
+    scanf("%d",&max_age);
+
+    FILE *fp = fopen("sale_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->price = co.price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->age >= min_age && temp->age <= max_age ){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_room_sale_commercial()
+{
+    int min_room, max_room;
+    int count_commercial = 0;
+    struct commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct commercial co;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter The Min Number Of Rooms : ");
+    scanf("%d",&min_room);
+    printf("Please Enter The Max Number Of Rooms : ");
+    scanf("%d",&max_room);
+
+
+    FILE *fp = fopen("sale_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->price = co.price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->room >= min_room && temp->room <= max_room){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_substruction_sale_commercial()
+{
+    int min_substruction , max_substruction;
+    int count_commercial = 0;
+    struct commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct commercial co;
+
+    system("cls");
+
+
+    line_2();
+
+    printf("Please Enter Min substruction Area : ");
+    scanf("%d",&min_substruction);
+    printf("Please Enter Max substruction Area  : ");
+    scanf("%d",&max_substruction);
+
+    FILE *fp = fopen("sale_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->price = co.price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->substruction >= min_substruction && temp->substruction <= max_substruction ){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Sale With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
     system("pause");
 }
 
@@ -5732,15 +7910,363 @@ void filter_sale_land()
             printf("owner phone-number : %s\n",temp->phone);
             printf("price($) : %d\n",temp->price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
 
-    if(count_land == 0 || count_land == 1)
+    if(count_land == 0 || count_land == 1){
         printf("\n%d Land Is Available For Sale With This Condition.\n\n",count_land);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Lands Are Available For Sale With This Condition.\n\n",count_land);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_price_sale_land()
+{
+    int min_price, max_price;
+    int count_land = 0;
+    struct land *head = NULL , *temp = NULL , *last = NULL;
+    struct land ld;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Price : ");
+    scanf("%d",&min_price);
+    printf("Please Enter Max Price : ");
+    scanf("%d",&max_price);
+
+    FILE *fp = fopen("sale_land.txt","r");
+
+    while(fread(&ld,sizeof(struct land),1, fp)){
+
+
+        temp = malloc(sizeof(struct land));
+
+        temp->no = ld.no;
+        temp->municipal_area = ld.municipal_area;
+        strcpy(temp->address,ld.address);
+        strcpy(temp->type,ld.type);
+        temp->meterage = ld.meterage;
+        strcpy(temp->phone,ld.phone);
+        temp->price = ld.price;
+        temp->status = ld.status;
+        strcpy(temp->registration_date,ld.registration_date);
+        strcpy(temp->sale_date,ld.sale_date);
+        strcpy(temp->registerar_uname,ld.registerar_uname);
+        strcpy(temp->seller_uname,ld.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->price >= min_price && temp->price <= max_price ){
+            count_land++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of land : %s\n",temp->type);
+            printf("meterage of land : %d\n",temp->meterage);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_land == 0 || count_land == 1){
+        printf("\n%d Land Is Available For Sale With This Condition.\n\n",count_land);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Lands Are Available For Sale With This Condition.\n\n",count_land);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_municipal_sale_land()
+{
+    int min_municipal, max_municipal;
+    int count_land = 0;
+    struct land *head = NULL , *temp = NULL , *last = NULL;
+    struct land ld;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Municipal Area : ");
+    scanf("%d",&min_municipal);
+    printf("Please Enter Max Municipal Area : ");
+    scanf("%d",&max_municipal);
+
+
+    FILE *fp = fopen("sale_land.txt","r");
+
+    while(fread(&ld,sizeof(struct land),1, fp)){
+
+
+        temp = malloc(sizeof(struct land));
+
+        temp->no = ld.no;
+        temp->municipal_area = ld.municipal_area;
+        strcpy(temp->address,ld.address);
+        strcpy(temp->type,ld.type);
+        temp->meterage = ld.meterage;
+        strcpy(temp->phone,ld.phone);
+        temp->price = ld.price;
+        temp->status = ld.status;
+        strcpy(temp->registration_date,ld.registration_date);
+        strcpy(temp->sale_date,ld.sale_date);
+        strcpy(temp->registerar_uname,ld.registerar_uname);
+        strcpy(temp->seller_uname,ld.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->municipal_area >= min_municipal && temp->municipal_area <= max_municipal){
+            count_land++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of land : %s\n",temp->type);
+            printf("meterage of land : %d\n",temp->meterage);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_land == 0 || count_land == 1){
+        printf("\n%d Land Is Available For Sale With This Condition.\n\n",count_land);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Lands Are Available For Sale With This Condition.\n\n",count_land);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_type_sale_land()
+{
+    char type_of_land[50];
+    int opt;
+    int count_land = 0;
+    struct land *head = NULL , *temp = NULL , *last = NULL;
+    struct land ld;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Specify The land Type(1-agriculture OR 2-residential development land)\nPlease Enter number 1 or 2 : ");
+    fflush(stdin);
+    scanf("%d",&opt);
+    if(opt == 1){
+        strcpy(type_of_land,"agriculture");
+    }
+    if(opt == 2){
+        strcpy(type_of_land,"residential development");
+    }
+
+    FILE *fp = fopen("sale_land.txt","r");
+
+    while(fread(&ld,sizeof(struct land),1, fp)){
+
+
+        temp = malloc(sizeof(struct land));
+
+        temp->no = ld.no;
+        temp->municipal_area = ld.municipal_area;
+        strcpy(temp->address,ld.address);
+        strcpy(temp->type,ld.type);
+        temp->meterage = ld.meterage;
+        strcpy(temp->phone,ld.phone);
+        temp->price = ld.price;
+        temp->status = ld.status;
+        strcpy(temp->registration_date,ld.registration_date);
+        strcpy(temp->sale_date,ld.sale_date);
+        strcpy(temp->registerar_uname,ld.registerar_uname);
+        strcpy(temp->seller_uname,ld.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && strcmp(type_of_land,temp->type)==0){
+            count_land++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of land : %s\n",temp->type);
+            printf("meterage of land : %d\n",temp->meterage);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_land == 0 || count_land == 1){
+        printf("\n%d Land Is Available For Sale With This Condition.\n\n",count_land);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Lands Are Available For Sale With This Condition.\n\n",count_land);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_mesurement_sale_land()
+{
+    int min_land, max_land;
+    int count_land = 0;
+    struct land *head = NULL , *temp = NULL , *last = NULL;
+    struct land ld;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Mesurement Of Land : ");
+    scanf("%d",&min_land);
+    printf("Please Enter Max Mesurement Of Land: ");
+    scanf("%d",&max_land);
+
+
+    FILE *fp = fopen("sale_land.txt","r");
+
+    while(fread(&ld,sizeof(struct land),1, fp)){
+
+
+        temp = malloc(sizeof(struct land));
+
+        temp->no = ld.no;
+        temp->municipal_area = ld.municipal_area;
+        strcpy(temp->address,ld.address);
+        strcpy(temp->type,ld.type);
+        temp->meterage = ld.meterage;
+        strcpy(temp->phone,ld.phone);
+        temp->price = ld.price;
+        temp->status = ld.status;
+        strcpy(temp->registration_date,ld.registration_date);
+        strcpy(temp->sale_date,ld.sale_date);
+        strcpy(temp->registerar_uname,ld.registerar_uname);
+        strcpy(temp->seller_uname,ld.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->meterage >= min_land && temp->meterage <= max_land){
+            count_land++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of land : %s\n",temp->type);
+            printf("meterage of land : %d\n",temp->meterage);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("price($) : %d\n",temp->price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_land == 0 || count_land == 1){
+        printf("\n%d Land Is Available For Sale With This Condition.\n\n",count_land);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Lands Are Available For Sale With This Condition.\n\n",count_land);
+        Beep(700,700);
+    }
     system("pause");
 }
 
@@ -5881,15 +8407,576 @@ void filter_rent_apartment()
             printf("Mortgage price($) : %d\n",temp->mortgage_price);
             printf("Rent price($) : %d\n",temp->rent_price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
-    if(count_apartemnt == 0 || count_apartemnt == 1)
+    if(count_apartemnt == 0 || count_apartemnt == 1){
         printf("\n%d Apartment Is Available For Rent With This Condition.\n\n",count_apartemnt);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Apartments Are Available For Rent With This Condition.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    system("pause");
+}
 
+void filter_price_rent_apartment()
+{
+    int min_mortgage_price, max_mortgage_price;
+    int min_rent_price, max_rent_price;
+    int count_apartemnt = 0;
+    struct rent_apartment *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_apartment ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Mortgage Price : ");
+    scanf("%d",&min_mortgage_price);
+    printf("Please Enter Max Mortgage Price : ");
+    scanf("%d",&max_mortgage_price);
+
+    line_2();
+
+    printf("Please Enter Min Rent Price : ");
+    scanf("%d",&min_rent_price);
+    printf("Please Enter Max Rent Price : ");
+    scanf("%d",&max_rent_price);
+
+
+    FILE *fp = fopen("rent_apartment.txt","r");
+
+    while(fread(&ap,sizeof(struct rent_apartment),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_apartment));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->mortgage_price = ap.mortgage_price;
+        temp->rent_price = ap.rent_price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->mortgage_price >= min_mortgage_price && temp->mortgage_price <= max_mortgage_price && temp->rent_price >= min_rent_price
+                && temp->rent_price <= max_rent_price ){
+            count_apartemnt++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_apartemnt == 0 || count_apartemnt == 1){
+        printf("\n%d Apartment Is Available For Rent With This Condition.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Apartments Are Available For Rent With This Condition.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_municipal_rent_apartment()
+{
+    int min_municipal, max_municipal;
+    int count_apartemnt = 0;
+    struct rent_apartment *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_apartment ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Municipal Area : ");
+    scanf("%d",&min_municipal);
+    printf("Please Enter Max Municipal Area : ");
+    scanf("%d",&max_municipal);
+
+    FILE *fp = fopen("rent_apartment.txt","r");
+
+    while(fread(&ap,sizeof(struct rent_apartment),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_apartment));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->mortgage_price = ap.mortgage_price;
+        temp->rent_price = ap.rent_price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->municipal_area >= min_municipal && temp->municipal_area <= max_municipal ){
+            count_apartemnt++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_apartemnt == 0 || count_apartemnt == 1){
+        printf("\n%d Apartment Is Available For Rent With This Condition.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Apartments Are Available For Rent With This Condition.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_floor_rent_apartment()
+{
+    int min_floor, max_floor;
+    int count_apartemnt = 0;
+    struct rent_apartment *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_apartment ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Floor : ");
+    scanf("%d",&min_floor);
+    printf("Please Enter Max Floor : ");
+    scanf("%d",&max_floor);
+
+    FILE *fp = fopen("rent_apartment.txt","r");
+
+    while(fread(&ap,sizeof(struct rent_apartment),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_apartment));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->mortgage_price = ap.mortgage_price;
+        temp->rent_price = ap.rent_price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->floor >= min_floor && temp->floor <= max_floor ){
+            count_apartemnt++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_apartemnt == 0 || count_apartemnt == 1){
+        printf("\n%d Apartment Is Available For Rent With This Condition.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Apartments Are Available For Rent With This Condition.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_age_rent_apartment()
+{
+    int min_age, max_age;
+    int count_apartemnt = 0;
+    struct rent_apartment *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_apartment ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Age Of Apartment : ");
+    scanf("%d",&min_age);
+    printf("Please Enter Max Age Of Apartment : ");
+    scanf("%d",&max_age);
+
+
+    FILE *fp = fopen("rent_apartment.txt","r");
+
+    while(fread(&ap,sizeof(struct rent_apartment),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_apartment));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->mortgage_price = ap.mortgage_price;
+        temp->rent_price = ap.rent_price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->age >= min_age && temp->age <= max_age ){
+            count_apartemnt++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_apartemnt == 0 || count_apartemnt == 1){
+        printf("\n%d Apartment Is Available For Rent With This Condition.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Apartments Are Available For Rent With This Condition.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_bedroom_rent_apartment()
+{
+    int min_bedroom, max_bedroom;
+    int count_apartemnt = 0;
+    struct rent_apartment *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_apartment ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter The Min Number Of Bedrooms : ");
+    scanf("%d",&min_bedroom);
+    printf("Please Enter The Max Number Of Bedrooms : ");
+    scanf("%d",&max_bedroom);
+
+
+    FILE *fp = fopen("rent_apartment.txt","r");
+
+    while(fread(&ap,sizeof(struct rent_apartment),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_apartment));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->mortgage_price = ap.mortgage_price;
+        temp->rent_price = ap.rent_price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->bedroom >= min_bedroom && temp->bedroom <= max_bedroom ){
+            count_apartemnt++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_apartemnt == 0 || count_apartemnt == 1){
+        printf("\n%d Apartment Is Available For Rent With This Condition.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Apartments Are Available For Rent With This Condition.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_substruction_rent_apartment()
+{
+    int min_substruction , max_substruction;
+    int count_apartemnt = 0;
+    struct rent_apartment *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_apartment ap;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min substruction Area : ");
+    scanf("%d",&min_substruction);
+    printf("Please Enter Max substruction Area  : ");
+    scanf("%d",&max_substruction);
+
+    FILE *fp = fopen("rent_apartment.txt","r");
+
+    while(fread(&ap,sizeof(struct rent_apartment),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_apartment));
+
+        temp->no = ap.no;
+        temp->municipal_area = ap.municipal_area;
+        strcpy(temp->address,ap.address);
+        temp->age = ap.age;
+        temp->substruction = ap.substruction;
+        temp->floor = ap.floor;
+        temp->land = ap.land;
+        strcpy(temp->phone,ap.phone);
+        temp->bedroom = ap.bedroom;
+        temp->mortgage_price = ap.mortgage_price;
+        temp->rent_price = ap.rent_price;
+        temp->status = ap.status;
+        strcpy(temp->registration_date,ap.registration_date);
+        strcpy(temp->sale_date,ap.sale_date);
+        strcpy(temp->registerar_uname,ap.registerar_uname);
+        strcpy(temp->seller_uname,ap.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->substruction >= min_substruction && temp->substruction <= max_substruction ){
+            count_apartemnt++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of apartment : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_apartemnt == 0 || count_apartemnt == 1){
+        printf("\n%d Apartment Is Available For Rent With This Condition.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Apartments Are Available For Rent With This Condition.\n\n",count_apartemnt);
+        Beep(700,700);
+    }
     system("pause");
 }
 
@@ -5898,7 +8985,6 @@ void filter_rent_house()
     int min_floor, max_floor;
     int min_mortgage_price, max_mortgage_price;
     int min_rent_price, max_rent_price;
-    int min_price, max_price;
     int min_municipal, max_municipal;
     int min_land, max_land;
     int min_substruction , max_substruction;
@@ -5920,7 +9006,7 @@ void filter_rent_house()
     line_2();
 
     printf("Please Enter Min Rent Price : ");
-    scanf("%d",&min_price);
+    scanf("%d",&min_rent_price);
     printf("Please Enter Max Rent Price : ");
     scanf("%d",&max_rent_price);
 
@@ -6030,16 +9116,581 @@ void filter_rent_house()
             printf("Mortgage price($) : %d\n",temp->mortgage_price);
             printf("Rent price($) : %d\n",temp->rent_price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
 
-    if(count_house == 0 || count_house == 1)
+    if(count_house == 0 || count_house == 1){
         printf("\n%d House Is Available For Rent With This Condition.\n\n",count_house);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Houses Are Available For Rent With This Condition.\n\n",count_house);
+        Beep(700,700);
+    }
+    system("pause");
+}
 
+void filter_price_rent_house()
+{
+    int min_mortgage_price, max_mortgage_price;
+    int min_rent_price, max_rent_price;
+    int count_house = 0;
+    struct rent_house *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_house h;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Mortgage Price : ");
+    scanf("%d",&min_mortgage_price);
+    printf("Please Enter Max Mortgage Price : ");
+    scanf("%d",&max_mortgage_price);
+
+    line_2();
+
+    printf("Please Enter Min Rent Price : ");
+    scanf("%d",&min_rent_price);
+    printf("Please Enter Max Rent Price : ");
+    scanf("%d",&max_rent_price);
+
+
+    FILE *fp = fopen("rent_house.txt","r");
+
+    while(fread(&h,sizeof(struct rent_house),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_house));
+
+        temp->no = h.no;
+        temp->municipal_area = h.municipal_area;
+        strcpy(temp->address,h.address);
+        temp->age = h.age;
+        temp->substruction = h.substruction;
+        temp->floor = h.floor;
+        temp->land = h.land;
+        strcpy(temp->phone,h.phone);
+        temp->bedroom = h.bedroom;
+        temp->mortgage_price = h.mortgage_price;
+        temp->rent_price = h.rent_price;
+        temp->status = h.status;
+        strcpy(temp->registration_date,h.registration_date);
+        strcpy(temp->sale_date,h.sale_date);
+        strcpy(temp->registerar_uname,h.registerar_uname);
+        strcpy(temp->seller_uname,h.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    system("cls");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->mortgage_price >= min_mortgage_price && temp->mortgage_price <= max_mortgage_price && temp->rent_price >= min_rent_price
+                && temp->rent_price <= max_rent_price){
+            count_house++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of house : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_house == 0 || count_house == 1){
+        printf("\n%d House Is Available For Rent With This Condition.\n\n",count_house);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Houses Are Available For Rent With This Condition.\n\n",count_house);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_municipal_rent_house()
+{
+    int min_municipal, max_municipal;
+    int count_house = 0;
+    struct rent_house *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_house h;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Municipal Area : ");
+    scanf("%d",&min_municipal);
+    printf("Please Enter Max Municipal Area : ");
+    scanf("%d",&max_municipal);
+
+    FILE *fp = fopen("rent_house.txt","r");
+
+    while(fread(&h,sizeof(struct rent_house),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_house));
+
+        temp->no = h.no;
+        temp->municipal_area = h.municipal_area;
+        strcpy(temp->address,h.address);
+        temp->age = h.age;
+        temp->substruction = h.substruction;
+        temp->floor = h.floor;
+        temp->land = h.land;
+        strcpy(temp->phone,h.phone);
+        temp->bedroom = h.bedroom;
+        temp->mortgage_price = h.mortgage_price;
+        temp->rent_price = h.rent_price;
+        temp->status = h.status;
+        strcpy(temp->registration_date,h.registration_date);
+        strcpy(temp->sale_date,h.sale_date);
+        strcpy(temp->registerar_uname,h.registerar_uname);
+        strcpy(temp->seller_uname,h.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    system("cls");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->municipal_area >= min_municipal && temp->municipal_area <= max_municipal ){
+            count_house++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of house : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_house == 0 || count_house == 1){
+        printf("\n%d House Is Available For Rent With This Condition.\n\n",count_house);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Houses Are Available For Rent With This Condition.\n\n",count_house);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_floor_rent_house()
+{
+    int min_floor, max_floor;
+    int count_house = 0;
+    struct rent_house *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_house h;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Floor : ");
+    scanf("%d",&min_floor);
+    printf("Please Enter Max Floor : ");
+    scanf("%d",&max_floor);
+
+    FILE *fp = fopen("rent_house.txt","r");
+
+    while(fread(&h,sizeof(struct rent_house),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_house));
+
+        temp->no = h.no;
+        temp->municipal_area = h.municipal_area;
+        strcpy(temp->address,h.address);
+        temp->age = h.age;
+        temp->substruction = h.substruction;
+        temp->floor = h.floor;
+        temp->land = h.land;
+        strcpy(temp->phone,h.phone);
+        temp->bedroom = h.bedroom;
+        temp->mortgage_price = h.mortgage_price;
+        temp->rent_price = h.rent_price;
+        temp->status = h.status;
+        strcpy(temp->registration_date,h.registration_date);
+        strcpy(temp->sale_date,h.sale_date);
+        strcpy(temp->registerar_uname,h.registerar_uname);
+        strcpy(temp->seller_uname,h.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    system("cls");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->floor >= min_floor && temp->floor <= max_floor ){
+            count_house++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of house : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_house == 0 || count_house == 1){
+        printf("\n%d House Is Available For Rent With This Condition.\n\n",count_house);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Houses Are Available For Rent With This Condition.\n\n",count_house);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_age_rent_house()
+{
+    int min_age, max_age;
+    int count_house = 0;
+    struct rent_house *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_house h;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Age Of House : ");
+    scanf("%d",&min_age);
+    printf("Please Enter Max Age Of House : ");
+    scanf("%d",&max_age);
+
+    FILE *fp = fopen("rent_house.txt","r");
+
+    while(fread(&h,sizeof(struct rent_house),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_house));
+
+        temp->no = h.no;
+        temp->municipal_area = h.municipal_area;
+        strcpy(temp->address,h.address);
+        temp->age = h.age;
+        temp->substruction = h.substruction;
+        temp->floor = h.floor;
+        temp->land = h.land;
+        strcpy(temp->phone,h.phone);
+        temp->bedroom = h.bedroom;
+        temp->mortgage_price = h.mortgage_price;
+        temp->rent_price = h.rent_price;
+        temp->status = h.status;
+        strcpy(temp->registration_date,h.registration_date);
+        strcpy(temp->sale_date,h.sale_date);
+        strcpy(temp->registerar_uname,h.registerar_uname);
+        strcpy(temp->seller_uname,h.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    system("cls");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1 && temp->age >= min_age && temp->age <= max_age ){
+            count_house++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of house : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_house == 0 || count_house == 1){
+        printf("\n%d House Is Available For Rent With This Condition.\n\n",count_house);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Houses Are Available For Rent With This Condition.\n\n",count_house);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_bedroom_rent_house()
+{
+    int min_bedroom, max_bedroom;
+    int count_house = 0;
+    struct rent_house *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_house h;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter The Min Number Of Bedrooms : ");
+    scanf("%d",&min_bedroom);
+    printf("Please Enter The Max Number Of Bedrooms : ");
+    scanf("%d",&max_bedroom);
+
+    FILE *fp = fopen("rent_house.txt","r");
+
+    while(fread(&h,sizeof(struct rent_house),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_house));
+
+        temp->no = h.no;
+        temp->municipal_area = h.municipal_area;
+        strcpy(temp->address,h.address);
+        temp->age = h.age;
+        temp->substruction = h.substruction;
+        temp->floor = h.floor;
+        temp->land = h.land;
+        strcpy(temp->phone,h.phone);
+        temp->bedroom = h.bedroom;
+        temp->mortgage_price = h.mortgage_price;
+        temp->rent_price = h.rent_price;
+        temp->status = h.status;
+        strcpy(temp->registration_date,h.registration_date);
+        strcpy(temp->sale_date,h.sale_date);
+        strcpy(temp->registerar_uname,h.registerar_uname);
+        strcpy(temp->seller_uname,h.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    system("cls");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1  && temp->bedroom >= min_bedroom && temp->bedroom <= max_bedroom ){
+            count_house++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of house : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_house == 0 || count_house == 1){
+        printf("\n%d House Is Available For Rent With This Condition.\n\n",count_house);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Houses Are Available For Rent With This Condition.\n\n",count_house);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_substruction_rent_house()
+{
+    int min_substruction , max_substruction;
+    int count_house = 0;
+    struct rent_house *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_house h;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min substruction Area : ");
+    scanf("%d",&min_substruction);
+    printf("Please Enter Max substruction Area  : ");
+    scanf("%d",&max_substruction);
+
+    FILE *fp = fopen("rent_house.txt","r");
+
+    while(fread(&h,sizeof(struct rent_house),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_house));
+
+        temp->no = h.no;
+        temp->municipal_area = h.municipal_area;
+        strcpy(temp->address,h.address);
+        temp->age = h.age;
+        temp->substruction = h.substruction;
+        temp->floor = h.floor;
+        temp->land = h.land;
+        strcpy(temp->phone,h.phone);
+        temp->bedroom = h.bedroom;
+        temp->mortgage_price = h.mortgage_price;
+        temp->rent_price = h.rent_price;
+        temp->status = h.status;
+        strcpy(temp->registration_date,h.registration_date);
+        strcpy(temp->sale_date,h.sale_date);
+        strcpy(temp->registerar_uname,h.registerar_uname);
+        strcpy(temp->seller_uname,h.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    printf("\n========================================================\n\n");
+
+    system("cls");
+
+    temp = head;
+    while(temp != NULL){
+
+            if(temp->status == 1  && temp->substruction >= min_substruction && temp->substruction <= max_substruction ){
+            count_house++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("age of house : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of bedrooms : %d\n",temp->bedroom);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+
+    if(count_house == 0 || count_house == 1){
+        printf("\n%d House Is Available For Rent With This Condition.\n\n",count_house);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Houses Are Available For Rent With This Condition.\n\n",count_house);
+        Beep(700,700);
+    }
     system("pause");
 }
 
@@ -6196,17 +9847,696 @@ void filter_rent_commercial()
             printf("Mortgage price($) : %d\n",temp->mortgage_price);
             printf("Rent price($) : %d\n",temp->rent_price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
-    if(count_commercial == 0 || count_commercial == 1)
+    if(count_commercial == 0 || count_commercial == 1){
         printf("\n%d Commercial Property Is Available For Rent With This Condition.\n\n",count_commercial);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Commercial Properties Are Available For Rent With This Condition.\n\n",count_commercial);
-
+        Beep(700,700);
+    }
     system("pause");
 
+}
+
+void filter_price_rent_commercial()
+{
+    int min_mortgage_price, max_mortgage_price;
+    int min_rent_price, max_rent_price;
+    int count_commercial = 0;
+    struct rent_commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_commercial co;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Mortgage  Price : ");
+    scanf("%d",&min_mortgage_price);
+    printf("Please Enter Max Mortgage  Price : ");
+    scanf("%d",&max_mortgage_price);
+
+    line_2();
+
+    printf("Please Enter Min Rent Price : ");
+    scanf("%d",&min_rent_price);
+    printf("Please Enter Max Rent Price : ");
+    scanf("%d",&max_rent_price);
+
+
+    FILE *fp = fopen("rent_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct rent_commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->mortgage_price = co.mortgage_price;
+        temp->rent_price = co.rent_price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+
+        if(temp->status == 1 && temp->mortgage_price >= min_mortgage_price && temp->mortgage_price <= max_mortgage_price &&temp->rent_price >= min_rent_price
+            && temp->rent_price <= max_rent_price ){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_municipal_rent_commercial()
+{
+    int min_municipal, max_municipal;
+    int count_commercial = 0;
+    struct rent_commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_commercial co;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Municipal Area : ");
+    scanf("%d",&min_municipal);
+    printf("Please Enter Max Municipal Area : ");
+    scanf("%d",&max_municipal);
+
+    FILE *fp = fopen("rent_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct rent_commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->mortgage_price = co.mortgage_price;
+        temp->rent_price = co.rent_price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+
+        if(temp->status == 1 && temp->municipal_area >= min_municipal && temp->municipal_area <= max_municipal ){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_type_rent_commercial()
+{
+    char type_of_document[50];
+    int opt;
+    int count_commercial = 0;
+    struct rent_commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_commercial co;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Specify The Document Type(1-Official administrative document OR 2-Administrative position)\nPlease Enter number 1 or 2 : ");
+    fflush(stdin);
+    scanf("%d",&opt);
+    if(opt == 1){
+        strcpy(type_of_document,"Official administrative document");
+    }
+    if(opt == 2){
+        strcpy(type_of_document,"Administrative position");
+    }
+
+
+    FILE *fp = fopen("rent_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct rent_commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->mortgage_price = co.mortgage_price;
+        temp->rent_price = co.rent_price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+
+        if(temp->status == 1 && strcmp(type_of_document,temp->document)==0){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_floor_rent_commercial()
+{
+    int min_floor, max_floor;
+    int count_commercial = 0;
+    struct rent_commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_commercial co;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Floor : ");
+    scanf("%d",&min_floor);
+    printf("Please Enter Max Floor : ");
+    scanf("%d",&max_floor);
+
+
+    FILE *fp = fopen("rent_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct rent_commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->mortgage_price = co.mortgage_price;
+        temp->rent_price = co.rent_price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+
+        if(temp->status == 1 && temp->floor >= min_floor && temp->floor <= max_floor ){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_age_rent_commercial()
+{
+    int min_age, max_age;
+    int count_commercial = 0;
+    struct rent_commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_commercial co;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Age Of Commercial property : ");
+    scanf("%d",&min_age);
+    printf("Please Enter Max Age Of Commercial property : ");
+    scanf("%d",&max_age);
+
+    FILE *fp = fopen("rent_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct rent_commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->mortgage_price = co.mortgage_price;
+        temp->rent_price = co.rent_price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+
+        if(temp->status == 1 && temp->age >= min_age && temp->age <= max_age ){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_room_rent_commercial()
+{
+    int min_room, max_room;
+    int count_commercial = 0;
+    struct rent_commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_commercial co;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter The Min Number Of Rooms : ");
+    scanf("%d",&min_room);
+    printf("Please Enter The Max Number Of Rooms : ");
+    scanf("%d",&max_room);
+
+    FILE *fp = fopen("rent_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct rent_commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->mortgage_price = co.mortgage_price;
+        temp->rent_price = co.rent_price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+
+        if(temp->status == 1 && temp->room >= min_room && temp->room <= max_room ){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
+}
+
+void filter_substruction_rent_commercial()
+{
+    int min_substruction , max_substruction;
+    int count_commercial = 0;
+    struct rent_commercial *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_commercial co;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min substruction Area : ");
+    scanf("%d",&min_substruction);
+    printf("Please Enter Max substruction Area  : ");
+    scanf("%d",&max_substruction);
+
+    FILE *fp = fopen("rent_commercial.txt","r");
+
+    while(fread(&co,sizeof(struct rent_commercial),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_commercial));
+
+        temp->no = co.no;
+        temp->municipal_area = co.municipal_area;
+        strcpy(temp->address,co.address);
+        strcpy(temp->document,co.document);
+        temp->age = co.age;
+        temp->substruction = co.substruction;
+        temp->floor = co.floor;
+        temp->land = co.land;
+        strcpy(temp->phone,co.phone);
+        temp->room = co.room;
+        temp->mortgage_price = co.mortgage_price;
+        temp->rent_price = co.rent_price;
+        temp->status = co.status;
+        strcpy(temp->registration_date,co.registration_date);
+        strcpy(temp->sale_date,co.sale_date);
+        strcpy(temp->registerar_uname,co.registerar_uname);
+        strcpy(temp->seller_uname,co.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+
+        if(temp->status == 1 && temp->substruction >= min_substruction && temp->substruction <= max_substruction ){
+            count_commercial++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of document : %s\n",temp->document);
+            printf("age of commercial property : %d\n",temp->age);
+            printf("substruction meterage : %d\n",temp->substruction);
+            printf("floor : %d\n",temp->floor);
+            printf("meterage of land : %d\n",temp->land);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("amount of rooms : %d\n",temp->room);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_commercial == 0 || count_commercial == 1){
+        printf("\n%d Commercial Property Is Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Commercial Properties Are Available For Rent With This Condition.\n\n",count_commercial);
+        Beep(700,700);
+    }
+    system("pause");
 }
 
 void filter_rent_land()
@@ -6320,14 +10650,385 @@ void filter_rent_land()
             printf("Mortgage price($) : %d\n",temp->mortgage_price);
             printf("Rent price($) : %d\n",temp->rent_price);
             printf("registration date : %s\n",temp->registration_date);
-            printf("\n==========================\n\n");
+            printf("\n========================================================\n\n");
         }
         temp = temp->next;
     }
-    if(count_land == 0 || count_land == 1)
+    if(count_land == 0 || count_land == 1){
         printf("\n%d Land Is Available For Rent.\n\n",count_land);
-    else
+        Beep(700,700);
+    }
+    else{
         printf("\n%d Lands Are Available For Rent.\n\n",count_land);
+        Beep(700,700);
+    }
+    system("pause");
+
+}
+
+void filter_price_rent_land()
+{
+    int min_mortgage_price, max_mortgage_price;
+    int min_rent_price, max_rent_price;
+    int count_land = 0;
+    struct rent_land *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_land ld;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Mortgage Price : ");
+    scanf("%d",&min_mortgage_price);
+    printf("Please Enter Max Mortgage Price : ");
+    scanf("%d",&max_mortgage_price);
+
+    line_2();
+
+    printf("Please Enter Min Rent Price : ");
+    scanf("%d",&min_rent_price);
+    printf("Please Enter Max Rent Price : ");
+    scanf("%d",&max_rent_price);
+
+
+    FILE *fp = fopen("rent_land.txt","r");
+
+    while(fread(&ld,sizeof(struct rent_land),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_land));
+
+        temp->no = ld.no;
+        temp->municipal_area = ld.municipal_area;
+        strcpy(temp->address,ld.address);
+        strcpy(temp->type,ld.type);
+        temp->meterage = ld.meterage;
+        strcpy(temp->phone,ld.phone);
+        temp->mortgage_price = ld.mortgage_price;
+        temp->rent_price = ld.rent_price;
+        temp->status = ld.status;
+        strcpy(temp->registration_date,ld.registration_date);
+        strcpy(temp->sale_date,ld.sale_date);
+        strcpy(temp->registerar_uname,ld.registerar_uname);
+        strcpy(temp->seller_uname,ld.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->mortgage_price >= min_mortgage_price && temp->mortgage_price <= max_mortgage_price
+            && temp->rent_price >= min_rent_price && temp->rent_price <= max_rent_price ){
+            count_land++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of land : %s\n",temp->type);
+            printf("meterage of land : %d\n",temp->meterage);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_land == 0 || count_land == 1){
+        printf("\n%d Land Is Available For Rent.\n\n",count_land);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Lands Are Available For Rent.\n\n",count_land);
+        Beep(700,700);
+    }
+    system("pause");
+
+}
+
+void filter_municipal_rent_land()
+{
+    int min_municipal, max_municipal;
+    int count_land = 0;
+    struct rent_land *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_land ld;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Municipal Area : ");
+    scanf("%d",&min_municipal);
+    printf("Please Enter Max Municipal Area : ");
+    scanf("%d",&max_municipal);
+
+
+    FILE *fp = fopen("rent_land.txt","r");
+
+    while(fread(&ld,sizeof(struct rent_land),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_land));
+
+        temp->no = ld.no;
+        temp->municipal_area = ld.municipal_area;
+        strcpy(temp->address,ld.address);
+        strcpy(temp->type,ld.type);
+        temp->meterage = ld.meterage;
+        strcpy(temp->phone,ld.phone);
+        temp->mortgage_price = ld.mortgage_price;
+        temp->rent_price = ld.rent_price;
+        temp->status = ld.status;
+        strcpy(temp->registration_date,ld.registration_date);
+        strcpy(temp->sale_date,ld.sale_date);
+        strcpy(temp->registerar_uname,ld.registerar_uname);
+        strcpy(temp->seller_uname,ld.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && temp->municipal_area >= min_municipal && temp->municipal_area <= max_municipal ){
+            count_land++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of land : %s\n",temp->type);
+            printf("meterage of land : %d\n",temp->meterage);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_land == 0 || count_land == 1){
+        printf("\n%d Land Is Available For Rent.\n\n",count_land);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Lands Are Available For Rent.\n\n",count_land);
+        Beep(700,700);
+    }
+    system("pause");
+
+}
+
+void filter_type_rent_land()
+{
+    char type_of_land[50];
+    int opt;
+    int count_land = 0;
+    struct rent_land *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_land ld;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Specify The land Type(1-agriculture OR 2-residential development land)\nPlease Enter number 1 or 2 : ");
+    fflush(stdin);
+    scanf("%d",&opt);
+    if(opt == 1){
+        strcpy(type_of_land,"agriculture");
+    }
+    if(opt == 2){
+        strcpy(type_of_land,"residential development");
+    }
+
+
+    FILE *fp = fopen("rent_land.txt","r");
+
+    while(fread(&ld,sizeof(struct rent_land),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_land));
+
+        temp->no = ld.no;
+        temp->municipal_area = ld.municipal_area;
+        strcpy(temp->address,ld.address);
+        strcpy(temp->type,ld.type);
+        temp->meterage = ld.meterage;
+        strcpy(temp->phone,ld.phone);
+        temp->mortgage_price = ld.mortgage_price;
+        temp->rent_price = ld.rent_price;
+        temp->status = ld.status;
+        strcpy(temp->registration_date,ld.registration_date);
+        strcpy(temp->sale_date,ld.sale_date);
+        strcpy(temp->registerar_uname,ld.registerar_uname);
+        strcpy(temp->seller_uname,ld.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1 && strcmp(type_of_land,temp->type)==0){
+            count_land++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of land : %s\n",temp->type);
+            printf("meterage of land : %d\n",temp->meterage);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_land == 0 || count_land == 1){
+        printf("\n%d Land Is Available For Rent.\n\n",count_land);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Lands Are Available For Rent.\n\n",count_land);
+        Beep(700,700);
+    }
+    system("pause");
+
+}
+
+void filter_mesurement_rent_land()
+{
+    int min_mortgage_price, max_mortgage_price;
+    int min_rent_price, max_rent_price;
+    int min_municipal, max_municipal;
+    int min_land, max_land;
+    char type_of_land[50];
+    int opt;
+    int count_land = 0;
+    struct rent_land *head = NULL , *temp = NULL , *last = NULL;
+    struct rent_land ld;
+
+    system("cls");
+
+    line_2();
+
+    printf("Please Enter Min Mesurement Of Land : ");
+    scanf("%d",&min_land);
+    printf("Please Enter Max Mesurement Of Land: ");
+    scanf("%d",&max_land);
+
+    FILE *fp = fopen("rent_land.txt","r");
+
+    while(fread(&ld,sizeof(struct rent_land),1, fp)){
+
+
+        temp = malloc(sizeof(struct rent_land));
+
+        temp->no = ld.no;
+        temp->municipal_area = ld.municipal_area;
+        strcpy(temp->address,ld.address);
+        strcpy(temp->type,ld.type);
+        temp->meterage = ld.meterage;
+        strcpy(temp->phone,ld.phone);
+        temp->mortgage_price = ld.mortgage_price;
+        temp->rent_price = ld.rent_price;
+        temp->status = ld.status;
+        strcpy(temp->registration_date,ld.registration_date);
+        strcpy(temp->sale_date,ld.sale_date);
+        strcpy(temp->registerar_uname,ld.registerar_uname);
+        strcpy(temp->seller_uname,ld.seller_uname);
+
+
+        if(head==NULL){
+                head = temp;
+                head->next = NULL;
+                last = head;
+        }
+        else{
+                last->next = temp;
+                last = temp;
+                last->next = NULL;
+        }
+
+    }
+    fclose(fp);
+
+    system("cls");
+
+    printf("\n========================================================\n\n");
+
+    temp = head;
+    while(temp != NULL){
+
+        if(temp->status == 1  && temp->meterage >= min_land && temp->meterage <= max_land ){
+            count_land++;//to find the amount of the apartments.
+            printf("#case number : %d\n\n",temp->no);
+            printf("municipal area : %d\n",temp->municipal_area);
+            printf("address : %s\n",temp->address);
+            printf("type of land : %s\n",temp->type);
+            printf("meterage of land : %d\n",temp->meterage);
+            printf("owner phone-number : %s\n",temp->phone);
+            printf("Mortgage price($) : %d\n",temp->mortgage_price);
+            printf("Rent price($) : %d\n",temp->rent_price);
+            printf("registration date : %s\n",temp->registration_date);
+            printf("\n========================================================\n\n");
+        }
+        temp = temp->next;
+    }
+    if(count_land == 0 || count_land == 1){
+        printf("\n%d Land Is Available For Rent.\n\n",count_land);
+        Beep(700,700);
+    }
+    else{
+        printf("\n%d Lands Are Available For Rent.\n\n",count_land);
+        Beep(700,700);
+    }
     system("pause");
 
 }
@@ -6336,10 +11037,25 @@ int check_password(char password[])
 {
     int count_alpha = 0;
     int i;
+    char pass[50];
+
+    printf("\nPlease Enter Password : ");
+    star_password(pass);
+
+    if(strcmp(pass,password)!=0){
+        printf("\n\nERROR\n");
+        printf("\nPasswords Are Not Same. Please Try Again!!!\n");
+        Beep(700,700);
+        system("pause");
+        printf("\n");
+        return 0;
+    }
+
 
     if(strlen(password) < 6){
         printf("\n\nERROR\n");
         printf("\nThe Password Should Be Between At Least 6 characters. Please Try Again!!!\n");
+        Beep(700,700);
         system("pause");
         printf("\n");
         return 0;
@@ -6348,6 +11064,7 @@ int check_password(char password[])
     if(strcmp(password,"123456") == 0){
         printf("\n\nERROR\n");
         printf("\nTry Stronger Password. Please Try again!!!\n");
+        Beep(700,700);
         system("pause");
         printf("\n");
         return 0;
@@ -6356,6 +11073,7 @@ int check_password(char password[])
     if(strcmp(password,"987654")== 0){
         printf("\n\nERROR\n");
         printf("\nTry Stronger Password. Please Try again!!!\n");
+        Beep(700,700);
         system("pause");
         printf("\n");
         return 0;
@@ -6371,6 +11089,7 @@ int check_password(char password[])
     if(count_alpha < 4){
         printf("\n\nERROR\n");
         printf("\nThe Password Must Have At Least 4 Alphabet Characters. Please Try Again!!!\n");
+        Beep(700,700);
         system("pause");
         printf("\n");
         return 0;
@@ -6386,6 +11105,7 @@ int check_phone_number(char phone[])
     if(strlen(phone) != 11){
         printf("\nERROR\n");
         printf("\nInvalid Phone-Number. Please Try Again!!!\n");
+        Beep(700,700);
         system("pause");
         printf("\n");
         return 0;
@@ -6394,6 +11114,7 @@ int check_phone_number(char phone[])
     if(phone[0] != '0' && phone[1] != '9'){
         printf("\nERROR\n");
         printf("\nInvalid Phone-Number. Please Try Again!!!\n");
+        Beep(700,700);
         system("pause");
         printf("\n");
         return 0;
@@ -6410,6 +11131,7 @@ int check_national_id(char id[])
     if(strlen(id) != 10){
         printf("\nERROR\n");
         printf("\nThe National-Id Must Have 10 characters. Please Try Again!!!\n");
+        Beep(700,700);
         system("pause");
         printf("\n");
         return 0;
@@ -6419,6 +11141,7 @@ int check_national_id(char id[])
         if(isalpha(id[i]) != 0){
             printf("\nERROR\n");
             printf("\nThe National-Id Does Not Have Alphabetical Character. Please Try Again!!!\n");
+            Beep(700,700);
             system("pause");
             return 0;
         }
@@ -6436,6 +11159,7 @@ int check_username(char uname[])
     if(strlen(uname) < 6){
         printf("\nERROR\n");
         printf("\nUser-name Must At Least 6 Characters. Please Try Again!!!\n");
+        Beep(700,700);
         system("pause");
         printf("\n");
         return 0;
@@ -6450,6 +11174,7 @@ int check_username(char uname[])
     if(count_alpha < 4){
         printf("\nERROR\n");
         printf("\nThe User-Name Must Have At Least 4 Alphabetical Characters. Please Try Again!!!\n");
+        Beep(700,700);
         system("pause");
         printf("\n");
         return 0;
@@ -6462,6 +11187,7 @@ int check_username(char uname[])
         if(strcmp(uname,u.username)==0){
             printf("\nERROR\n");
             printf("\nThe User-Name Has Already Been Taken. Please Try Again!!!\n");
+            Beep(700,700);
             system("pause");
             printf("\n");
             return 0;
@@ -6516,6 +11242,7 @@ int check_email(char email[])
     }else{
         printf("\nERROR\n");
         printf("\nInvalid Email. Please Try Again!!!\n");
+        Beep(700,700);
         system("pause");
         printf("\n");
         return 0;
@@ -6564,6 +11291,7 @@ void change_user_name_family(char uname[])
     fclose(fp);
     fclose(fp1);
     printf("\nUser Information Has Been Changed Successfully . Do Not Share You'r User-Name And Password With Anyone!!!\n");
+    Beep(700,700);
     system("pause");
 }
 
@@ -6613,6 +11341,7 @@ void change_user_password(char uname[])
     fclose(fp);
     fclose(fp1);
     printf("\n\nUser Information Has Been Changed Successfully . Do Not Share You'r User-Name And Password With Anyone!!!\n");
+    Beep(700,700);
     system("pause");
 }
 
@@ -6657,5 +11386,6 @@ void change_user_email(char uname[])
     fclose(fp);
     fclose(fp1);
     printf("\nUser Information Has Been Changed Successfully . Do Not Share You'r User-Name And Password With Anyone!!!\n");
+    Beep(700,700);
     system("pause");
 }
